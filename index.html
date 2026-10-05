@@ -41,6 +41,7 @@
           <span class="visually-hidden">Menu</span>
         </button>
         <nav class="site-nav" id="navigation" aria-label="Sections">
+          <a href="#agenda" data-spy>Agenda</a>
           <a href="#association" data-spy>L'association</a>
           <a href="#principes" data-spy>Principes</a>
           <a href="#organisation" data-spy>Organisation</a>
@@ -71,7 +72,8 @@
               l'organisation, les pôles d'activité et les responsabilités.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#poles">Les dix pôles</a>
+              <a class="btn btn-primary" href="#agenda">L'agenda</a>
+              <a class="btn btn-ghost" href="#poles">Les dix pôles</a>
               <a class="btn btn-ghost" href="#association">Lire le projet</a>
             </div>
           </div>
@@ -111,6 +113,21 @@
           </ul>
         </div>
       </header>
+
+      <section class="section section-tint" id="agenda">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">Agenda</p>
+            <h2>Les prochains rendez-vous.</h2>
+            <p class="lede">
+              Compétitions, sorties et animations à venir de l'association.
+            </p>
+          </div>
+          <div id="events" aria-live="polite">
+            <p class="events-status">Chargement de l'agenda…</p>
+          </div>
+        </div>
+      </section>
 
       <section class="section" id="association">
         <div class="wrap split">
@@ -679,6 +696,7 @@
           </p>
         </div>
         <nav class="footer-nav" aria-label="Pied de page">
+          <a href="#agenda">Agenda</a>
           <a href="#association">L'association</a>
           <a href="#principes">Principes</a>
           <a href="#organisation">Organisation</a>
