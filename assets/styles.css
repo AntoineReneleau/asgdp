@@ -314,6 +314,19 @@ ol {
   font-weight: 500;
 }
 
+.hero-copy {
+  container-type: inline-size;
+}
+
+.hero-title {
+  font-size: clamp(2.15rem, 11.2cqi, 4.75rem);
+  line-height: 1.12;
+}
+
+.hero-title span {
+  display: block;
+}
+
 .hero-lede {
   max-width: 38rem;
   margin: 1.4rem 0 0;
