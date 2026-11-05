@@ -927,6 +927,10 @@ ol {
   }
 }
 
+#nl-badge-frame {
+  display: none;
+}
+
 @media print {
   .site-header,
   .hero-actions,
