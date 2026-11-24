@@ -545,22 +545,26 @@ ol {
 }
 
 .pole-contact {
-  margin: 1.15rem 0 0;
+  margin: 1.35rem 0 0;
 }
 
 .pole-contact a {
-  color: var(--ochre);
+  display: inline-block;
+  max-width: 100%;
+  padding: 0.7rem 1.05rem;
+  background: var(--pine);
+  color: #fff;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.1em;
+  line-height: 1.35;
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .pole-contact a:hover {
-  color: var(--pine);
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
+  background: var(--pine-mid);
+  color: #fff;
 }
 
 .pole-cols {
@@ -712,6 +716,55 @@ ol {
 
 .section-tint {
   background: var(--cream);
+}
+
+.poster {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.poster img {
+  width: 100%;
+  max-width: 42rem;
+  height: auto;
+}
+
+.poster-copy {
+  max-width: 42rem;
+}
+
+.poster-copy ul {
+  margin: 0.2rem 0 1.35rem;
+}
+
+.poster-copy li {
+  position: relative;
+  padding: 0.45rem 0 0.45rem 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.poster-copy li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.05rem;
+  width: 0.35rem;
+  height: 1px;
+  background: var(--ochre);
+}
+
+.poster-contact {
+  margin: 0;
+}
+
+.poster-contact a {
+  color: var(--ochre);
+  font-weight: 600;
+  text-underline-offset: 0.18em;
+}
+
+.poster-contact a:hover {
+  color: var(--pine);
 }
 
 .events {
