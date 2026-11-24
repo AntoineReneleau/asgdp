@@ -544,6 +544,25 @@ ol {
   line-height: 1.25;
 }
 
+.pole-contact {
+  margin: 1.15rem 0 0;
+}
+
+.pole-contact a {
+  color: var(--ochre);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.pole-contact a:hover {
+  color: var(--pine);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 .pole-cols {
   display: grid;
   gap: 1.4rem;
