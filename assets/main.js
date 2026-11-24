@@ -261,3 +261,46 @@
       showStatus("L'agenda n'a pas pu être chargé.");
     });
 })();
+
+(function () {
+  var links = document.querySelectorAll("[data-subject]");
+  if (!links.length) return;
+
+  // Local part and host are stored ROT13 so the mailbox is not readable in the source.
+  function rot13(value) {
+    return value.replace(/[a-z]/gi, function (char) {
+      var code = char.charCodeAt(0);
+      var base = code <= 90 ? 65 : 97;
+      return String.fromCharCode(((code - base + 13) % 26) + base);
+    });
+  }
+
+  function mailHref(link) {
+    var address = rot13("nftqc26") + "@" + rot13("tznvy.pbz");
+    var subject = link.getAttribute("data-subject") || "";
+    var href = "mailto:" + address;
+    if (subject) href += "?subject=" + encodeURIComponent(subject);
+    return href;
+  }
+
+  function arm(link) {
+    var href = link.getAttribute("href") || "";
+    if (href.indexOf("mailto:") === 0) return;
+    link.setAttribute("href", mailHref(link));
+  }
+
+  links.forEach(function (link) {
+    link.addEventListener("focus", function () {
+      arm(link);
+    });
+    link.addEventListener("pointerdown", function () {
+      arm(link);
+    });
+    link.addEventListener("click", function (event) {
+      var href = link.getAttribute("href") || "";
+      if (href.indexOf("mailto:") === 0) return;
+      event.preventDefault();
+      window.location.href = mailHref(link);
+    });
+  });
+})();
